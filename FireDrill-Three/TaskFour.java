@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class TaskFour {
-    // Function to get elements at even indexes
+
     public static double[] getEvenIndexes(double[] inputArray) {
         double[] result = new double[5]; 
         int resultIndex = 0;
         int i = 0;
         
         while (i < 10) {
-            if (i % 2 == 0) { // Even index
+            if (i % 2 == 0) {
                 result[resultIndex] = inputArray[i];
                 resultIndex = resultIndex + 1;
             }
@@ -21,7 +21,6 @@ public class TaskFour {
         Scanner scanner = new Scanner(System.in);
         double[] scores = new double[10];
         
-        // Collect 10 scores (same as TaskOne)
         int count = 0;
         while (count < 10) {
             System.out.print("Enter score " + (count + 1) + ": ");
@@ -29,7 +28,6 @@ public class TaskFour {
             count = count + 1;
         }
         
-        // Get even index array and print it
         double[] evenIndexes = getEvenIndexes(scores);
         count = 0;
         while (count < 5) {
@@ -37,7 +35,5 @@ public class TaskFour {
             count = count + 1;
         }
         System.out.println();
-        
-        scanner.close();
     }
 }
